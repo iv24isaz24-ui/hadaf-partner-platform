@@ -6,6 +6,7 @@ import { Calendar, User, ArrowLeft } from "lucide-react";
 const Blog = () => {
   const blogPosts = [
     {
+      id: "1",
       title: "اتجاهات التوظيف الحديثة في 2024",
       excerpt: "استكشف أحدث التطورات في عالم التوظيف وكيفية الاستفادة منها في شركتك",
       category: "التوظيف",
@@ -14,6 +15,7 @@ const Blog = () => {
       readTime: "5 دقائق"
     },
     {
+      id: "2",
       title: "بناء ثقافة مؤسسية قوية",
       excerpt: "دليل شامل لإنشاء وتطوير ثقافة العمل الإيجابية في المؤسسات",
       category: "ثقافة العمل",
@@ -22,6 +24,7 @@ const Blog = () => {
       readTime: "7 دقائق"
     },
     {
+      id: "3",
       title: "التحول الرقمي في الموارد البشرية",
       excerpt: "كيف تستفيد التقنيات الحديثة في تطوير إدارة الموارد البشرية",
       category: "التقنية",
@@ -30,6 +33,7 @@ const Blog = () => {
       readTime: "6 دقائق"
     },
     {
+      id: "4",
       title: "فن القيادة الفعالة في العصر الحديث",
       excerpt: "استراتيجيات ومهارات القيادة التي يحتاجها المديرون اليوم",
       category: "القيادة",
@@ -106,7 +110,12 @@ const Blog = () => {
                 </div>
 
                 {/* Read More */}
-                <Button variant="ghost" size="sm" className="w-full justify-between p-0 h-auto">
+                <Button 
+                  variant="ghost" 
+                  size="sm" 
+                  className="w-full justify-between p-0 h-auto"
+                  onClick={() => window.location.href = `/blog/${post.id}`}
+                >
                   <span>اقرأ المزيد</span>
                   <ArrowLeft className="h-4 w-4" />
                 </Button>

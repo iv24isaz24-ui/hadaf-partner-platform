@@ -28,7 +28,15 @@ const Header = () => {
 
   const navItems = [
     { name: "الرئيسية", href: "#home" },
-    { name: "خدماتنا", href: "#services" },
+    { 
+      name: "خدماتنا", 
+      href: "#services",
+      subItems: [
+        { name: "منصة التدريب", href: "/training-platform" },
+        { name: "منصة الخدمات الإلكترونية", href: "/e-services-platform" },
+        { name: "منصة بُعد HR", href: "/boud-platform" }
+      ]
+    },
     { name: "الباقات", href: "#packages" },
     { name: "من نحن", href: "#about" },
     { name: "المدونة", href: "#blog" },
@@ -54,13 +62,29 @@ const Header = () => {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-6 rtl:space-x-reverse">
           {navItems.map((item) => (
-            <a
-              key={item.name}
-              href={item.href}
-              className="text-sm font-medium transition-colors hover:text-primary"
-            >
-              {item.name}
-            </a>
+            <div key={item.name} className="relative group">
+              <a
+                href={item.href}
+                className="text-sm font-medium transition-colors hover:text-primary"
+              >
+                {item.name}
+              </a>
+              {item.subItems && (
+                <div className="absolute top-full right-0 mt-2 w-56 bg-card rounded-lg shadow-strong border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                  <div className="p-2">
+                    {item.subItems.map((subItem) => (
+                      <a
+                        key={subItem.name}
+                        href={subItem.href}
+                        className="block px-3 py-2 text-sm text-muted-foreground hover:text-primary hover:bg-muted/50 rounded-md transition-colors"
+                      >
+                        {subItem.name}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
           ))}
         </nav>
 
@@ -77,7 +101,7 @@ const Header = () => {
           
           <Button
             variant="default"
-            className="hidden md:inline-flex bg-accent hover:bg-accent/90 text-accent-foreground"
+            className="hidden md:inline-flex bg-primary hover:bg-primary/90 text-primary-foreground"
           >
             استشارة مجانية
           </Button>
@@ -110,7 +134,7 @@ const Header = () => {
             ))}
             <Button
               variant="default"
-              className="w-full mt-4 bg-accent hover:bg-accent/90 text-accent-foreground"
+              className="w-full mt-4 bg-primary hover:bg-primary/90 text-primary-foreground"
             >
               استشارة مجانية
             </Button>

@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { CheckCircle, Users, Target, Award, TrendingUp } from "lucide-react";
+import { CheckCircle, Users, Target, Award, TrendingUp, Quote } from "lucide-react";
 
 const Hero = () => {
   const features = [
@@ -52,7 +52,7 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
                 size="lg" 
-                className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-8 py-6"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8 py-6"
               >
                 احصل على استشارة مجانية
               </Button>
@@ -66,24 +66,35 @@ const Hero = () => {
             </div>
 
             {/* Quote Highlight */}
-            <Card className="p-6 bg-gradient-card border-l-4 border-l-primary shadow-medium">
-              <blockquote className="text-2xl font-semibold text-primary italic">
-                "نجاحك هو هدفنا."
-              </blockquote>
+            <Card className="p-8 bg-gradient-primary/5 border border-primary/20 shadow-strong relative overflow-hidden">
+              <div className="absolute top-4 right-4 w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                <Quote className="h-6 w-6 text-primary" />
+              </div>
+              <div className="space-y-4">
+                <blockquote className="text-3xl font-bold text-primary">
+                  "نجاحك هو هدفنا."
+                </blockquote>
+                <p className="text-muted-foreground text-lg">
+                  شعار نؤمن به ونعمل من أجله في كل خدمة نقدمها
+                </p>
+              </div>
             </Card>
           </div>
 
           {/* Features Grid */}
           <div className="space-y-6">
-            <h3 className="text-2xl font-bold mb-6">✅ لماذا تختار هدف؟</h3>
-            <div className="space-y-4">
+            <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
+              <CheckCircle className="h-8 w-8 text-primary" />
+              لماذا تختار هدف؟
+            </h3>
+            <div className="grid grid-cols-1 gap-4">
               {features.map((feature, index) => (
-                <Card key={index} className="p-4 shadow-soft hover:shadow-medium transition-shadow">
-                  <div className="flex items-start gap-3">
-                    <div className="text-primary mt-1">
+                <Card key={index} className="p-5 shadow-soft hover:shadow-medium transition-all duration-300 hover:-translate-y-1 border-r-4 border-r-primary/20">
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary flex-shrink-0">
                       {feature.icon}
                     </div>
-                    <p className="text-sm leading-relaxed">{feature.text}</p>
+                    <p className="text-sm leading-relaxed font-medium">{feature.text}</p>
                   </div>
                 </Card>
               ))}

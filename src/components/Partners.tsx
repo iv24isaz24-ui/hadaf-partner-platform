@@ -1,4 +1,10 @@
 import { Card } from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 const Partners = () => {
   const partners = [
@@ -22,18 +28,33 @@ const Partners = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
-          {partners.map((partner, index) => (
-            <Card key={index} className="p-6 text-center shadow-soft hover:shadow-medium transition-all duration-300 hover:-translate-y-1">
-              <div className="space-y-3">
-                <div className="text-4xl">{partner.logo}</div>
-                <p className="text-sm font-medium text-muted-foreground">
-                  {partner.name}
-                </p>
-              </div>
-            </Card>
-          ))}
-        </div>
+        <Carousel
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          plugins={[
+            Autoplay({
+              delay: 2000,
+            }),
+          ]}
+          className="w-full"
+        >
+          <CarouselContent className="-ml-2 md:-ml-4">
+            {partners.map((partner, index) => (
+              <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2 md:basis-1/4 lg:basis-1/6">
+                <Card className="p-6 text-center shadow-soft hover:shadow-medium transition-all duration-300 hover:-translate-y-1">
+                  <div className="space-y-3">
+                    <div className="text-4xl">{partner.logo}</div>
+                    <p className="text-sm font-medium text-muted-foreground">
+                      {partner.name}
+                    </p>
+                  </div>
+                </Card>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </Carousel>
 
         <div className="text-center mt-8">
           <p className="text-muted-foreground">
