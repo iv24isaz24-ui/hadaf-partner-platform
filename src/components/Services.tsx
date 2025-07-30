@@ -8,6 +8,7 @@ import {
   Scale, 
   Cloud 
 } from "lucide-react";
+import ConsultationDialog from "@/components/ConsultationDialog";
 
 const Services = () => {
   const services = [
@@ -102,12 +103,14 @@ const Services = () => {
 
         {/* Bottom CTA */}
         <div className="text-center mt-12">
-          <Button 
-            size="lg" 
-            className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-6"
-          >
-            احصل على استشارة مجانية حول خدماتنا
-          </Button>
+          <ConsultationDialog>
+            <Button 
+              size="lg" 
+              className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-6"
+            >
+              احصل على استشارة مجانية حول خدماتنا
+            </Button>
+          </ConsultationDialog>
         </div>
       </div>
     </section>

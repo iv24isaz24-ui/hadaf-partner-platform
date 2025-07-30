@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { CheckCircle, Users, Target, Award, TrendingUp, Quote } from "lucide-react";
+import ConsultationDialog from "@/components/ConsultationDialog";
 
 const Hero = () => {
   const features = [
@@ -58,12 +59,14 @@ const Hero = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                size="lg" 
-                className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8 py-6"
-              >
-                احصل على استشارة مجانية
-              </Button>
+              <ConsultationDialog>
+                <Button 
+                  size="lg" 
+                  className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8 py-6"
+                >
+                  احصل على استشارة مجانية
+                </Button>
+              </ConsultationDialog>
             </div>
           </div>
 

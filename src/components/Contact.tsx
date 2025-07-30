@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MessageCircle, Twitter, Linkedin, Camera } from "lucide-react";
+import ConsultationDialog from "@/components/ConsultationDialog";
 
 const Contact = () => {
   return (
@@ -83,11 +84,13 @@ const Contact = () => {
                 <p className="text-white/90">
                   احصل على استشارة مجانية من خبرائنا خلال 24 ساعة
                 </p>
-                <Button 
-                  className="bg-accent hover:bg-accent/90 text-accent-foreground w-full"
-                >
-                  طلب استشارة مجانية
-                </Button>
+                <ConsultationDialog>
+                  <Button 
+                    className="bg-accent hover:bg-accent/90 text-accent-foreground w-full"
+                  >
+                    طلب استشارة مجانية
+                  </Button>
+                </ConsultationDialog>
               </div>
             </Card>
           </div>
