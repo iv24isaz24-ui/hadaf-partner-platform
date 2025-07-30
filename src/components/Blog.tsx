@@ -12,7 +12,8 @@ const Blog = () => {
       category: "التوظيف",
       date: "15 يناير 2024",
       author: "فريق هدف",
-      readTime: "5 دقائق"
+      readTime: "5 دقائق",
+      image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
     {
       id: "2",
@@ -21,7 +22,8 @@ const Blog = () => {
       category: "ثقافة العمل",
       date: "12 يناير 2024",
       author: "د. أحمد السعيد",
-      readTime: "7 دقائق"
+      readTime: "7 دقائق",
+      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
     {
       id: "3",
@@ -30,7 +32,8 @@ const Blog = () => {
       category: "التقنية",
       date: "10 يناير 2024",
       author: "سارة المحمد",
-      readTime: "6 دقائق"
+      readTime: "6 دقائق",
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
     {
       id: "4",
@@ -39,7 +42,8 @@ const Blog = () => {
       category: "القيادة",
       date: "8 يناير 2024",
       author: "محمد العتيبي",
-      readTime: "8 دقائق"
+      readTime: "8 دقائق",
+      image: "https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ];
 
@@ -49,7 +53,7 @@ const Blog = () => {
     <section id="blog" className="py-16 bg-muted/30">
       <div className="container">
         <div className="text-center space-y-4 mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold">📚 المدونة</h2>
+          <h2 className="text-3xl md:text-4xl font-bold">المدونة</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             تابع أحدث توجهات الموارد البشرية من خلال مقالاتنا في القيادة، التوظيف، ثقافة العمل، والتقنية
           </p>
@@ -73,9 +77,13 @@ const Blog = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {blogPosts.map((post, index) => (
             <Card key={index} className="overflow-hidden shadow-medium hover:shadow-strong transition-all duration-300 hover:-translate-y-2">
-              {/* Image Placeholder */}
-              <div className="h-48 bg-gradient-primary/10 flex items-center justify-center">
-                <span className="text-4xl opacity-50">📖</span>
+              {/* Blog Post Image */}
+              <div className="h-48 overflow-hidden">
+                <img 
+                  src={post.image} 
+                  alt={post.title}
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
               </div>
 
               <div className="p-6 space-y-4">
