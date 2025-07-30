@@ -32,10 +32,13 @@ const Partners = () => {
           opts={{
             align: "start",
             loop: true,
+            dragFree: true,
           }}
           plugins={[
             Autoplay({
-              delay: 2000,
+              delay: 0,
+              stopOnInteraction: false,
+              stopOnMouseEnter: false,
             }),
           ]}
           className="w-full"

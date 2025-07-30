@@ -24,8 +24,8 @@ All colors MUST be HSL.
     --secondary: 0 0% 69%; /* #B1B0B0 */
     --secondary-foreground: 0 0% 0%;
 
-    /* Gold accent for CTA buttons */
-    --accent: 45 75% 52%; /* #D4AF37 */
+    /* Secondary accent using primary tones */
+    --accent: 166 30% 35%; /* Darker teal tone */
     --accent-foreground: 0 0% 0%;
 
     --muted: 0 0% 96%;
@@ -42,7 +42,7 @@ All colors MUST be HSL.
     
     /* Custom gradients */
     --gradient-primary: linear-gradient(135deg, hsl(166 40% 49%), hsl(166 50% 60%));
-    --gradient-hero: linear-gradient(135deg, hsl(166 40% 49%), hsl(45 75% 52%));
+    --gradient-hero: linear-gradient(135deg, hsl(166 40% 49%), hsl(166 50% 65%));
     --gradient-card: linear-gradient(135deg, hsl(0 0% 100%), hsl(0 0% 98%));
     
     /* Shadows */
@@ -84,8 +84,8 @@ All colors MUST be HSL.
     --secondary: 0 0% 20%;
     --secondary-foreground: 0 0% 95%;
 
-    /* Gold accent remains prominent in dark mode */
-    --accent: 45 75% 60%; /* Slightly brighter gold */
+    /* Secondary accent for dark mode */
+    --accent: 166 40% 60%; /* Lighter teal tone for dark mode */
     --accent-foreground: 0 0% 0%;
 
     --muted: 0 0% 15%;
@@ -100,7 +100,7 @@ All colors MUST be HSL.
     
     /* Dark mode gradients */
     --gradient-primary: linear-gradient(135deg, hsl(166 40% 35%), hsl(166 40% 45%));
-    --gradient-hero: linear-gradient(135deg, hsl(166 40% 35%), hsl(45 75% 45%));
+    --gradient-hero: linear-gradient(135deg, hsl(166 40% 35%), hsl(166 45% 50%));
     --gradient-card: linear-gradient(135deg, hsl(0 0% 10%), hsl(0 0% 12%));
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;

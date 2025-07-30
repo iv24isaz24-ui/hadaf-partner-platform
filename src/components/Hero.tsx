@@ -64,13 +64,6 @@ const Hero = () => {
               >
                 احصل على استشارة مجانية
               </Button>
-              <Button 
-                variant="outline" 
-                size="lg"
-                className="text-lg px-8 py-6 text-white border-white/30 hover:bg-white/10 hover:text-white"
-              >
-                تعرف على المزيد
-              </Button>
             </div>
           </div>
 

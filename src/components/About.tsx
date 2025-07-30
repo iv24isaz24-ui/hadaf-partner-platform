@@ -18,71 +18,67 @@ const About = () => {
 
           {/* Vision, Mission, Values */}
           <div className="space-y-8">
-            {/* Vision */}
-            <div className="bg-gradient-primary/5 rounded-xl p-8 border border-primary/20">
-              <div className="flex items-start gap-6">
-                <div className="w-20 h-20 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <Eye className="h-10 w-10 text-primary" />
-                </div>
-                <div className="space-y-3">
-                  <h3 className="text-2xl font-bold text-primary">رؤيتنا</h3>
-                  <p className="text-lg text-muted-foreground leading-relaxed">
+            <div className="grid md:grid-cols-3 gap-8">
+              {/* Vision */}
+              <Card className="p-8 text-center shadow-medium hover:shadow-strong transition-all duration-300 hover:-translate-y-1">
+                <div className="space-y-4">
+                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
+                    <Eye className="h-8 w-8 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-bold text-primary">رؤيتنا</h3>
+                  <p className="text-muted-foreground leading-relaxed">
                     أن نكون الشريك الأول لحلول الموارد البشرية المبتكرة في المملكة
                   </p>
                 </div>
-              </div>
-            </div>
+              </Card>
 
-            {/* Mission */}
-            <div className="bg-gradient-primary/5 rounded-xl p-8 border border-primary/20">
-              <div className="flex items-start gap-6">
-                <div className="w-20 h-20 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <Target className="h-10 w-10 text-primary" />
-                </div>
-                <div className="space-y-3">
-                  <h3 className="text-2xl font-bold text-primary">رسالتنا</h3>
-                  <p className="text-lg text-muted-foreground leading-relaxed">
+              {/* Mission */}
+              <Card className="p-8 text-center shadow-medium hover:shadow-strong transition-all duration-300 hover:-translate-y-1">
+                <div className="space-y-4">
+                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
+                    <Target className="h-8 w-8 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-bold text-primary">رسالتنا</h3>
+                  <p className="text-muted-foreground leading-relaxed">
                     تقديم حلول تنموية تساعد على تعزيز الأداء المؤسسي، وتحسين بيئة العمل، ورفع الكفاءة
                   </p>
                 </div>
-              </div>
-            </div>
+              </Card>
 
-            {/* Values */}
-            <div className="bg-gradient-primary/5 rounded-xl p-8 border border-primary/20">
-              <div className="flex items-start gap-6">
-                <div className="w-20 h-20 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <Heart className="h-10 w-10 text-primary" />
-                </div>
-                <div className="space-y-3">
-                  <h3 className="text-2xl font-bold text-primary">قيمنا</h3>
-                  <div className="grid grid-cols-2 gap-3 text-lg text-muted-foreground">
-                    <div className="flex items-center gap-2">
+              {/* Values */}
+              <Card className="p-8 text-center shadow-medium hover:shadow-strong transition-all duration-300 hover:-translate-y-1">
+                <div className="space-y-4">
+                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
+                    <Heart className="h-8 w-8 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-bold text-primary">قيمنا</h3>
+                  <div className="space-y-2 text-muted-foreground">
+                    <div className="flex items-center justify-center gap-2">
                       <div className="w-2 h-2 bg-primary rounded-full"></div>
                       <span>الاحترافية</span>
                     </div>
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center justify-center gap-2">
                       <div className="w-2 h-2 bg-primary rounded-full"></div>
                       <span>الشفافية</span>
                     </div>
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center justify-center gap-2">
                       <div className="w-2 h-2 bg-primary rounded-full"></div>
                       <span>الابتكار</span>
                     </div>
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center justify-center gap-2">
                       <div className="w-2 h-2 bg-primary rounded-full"></div>
                       <span>الالتزام</span>
                     </div>
                   </div>
                 </div>
-              </div>
+              </Card>
             </div>
           </div>
 
           {/* CEO Quote */}
           <Card className="p-8 bg-gradient-card shadow-medium">
             <div className="space-y-4">
-              <h3 className="text-2xl font-bold">💬 كلمة رئيس مجلس الإدارة</h3>
+              <h3 className="text-2xl font-bold">💬 كلمة مجلس الإدارة</h3>
               <blockquote className="text-lg text-muted-foreground italic leading-relaxed">
                 "نفخر في هدف بدورنا الريادي في تطوير بيئة العمل بالمملكة. نؤمن بأن الاستثمار في الإنسان 
                 هو استثمار في المستقبل، ونعمل على تمكين الشركات من النمو من خلال حلولنا المتقدمة والمخصصة."
