@@ -42,7 +42,7 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
           <div className="space-y-8">
-            <div className="space-y-4">
+            <div className="space-y-6">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white">
                 مرحباً بك في{" "}
                 <span className="text-primary">شركة هدف</span>{" "}
@@ -51,8 +51,9 @@ const Hero = () => {
               <p className="text-xl md:text-2xl text-white/90">
                 شريكك الاستراتيجي لنجاحك التنظيمي
               </p>
-              <p className="text-lg text-white/80">
-                حلول متكاملة، بفكر استشاري، وتقنية مرنة
+              <p className="text-lg text-white/80 leading-relaxed">
+                شركة سعودية متخصصة في تقديم حلول شاملة واحترافية في مجالات الموارد البشرية، 
+                مدعومة بخبرة عميقة وتقنيات حديثة لضمان نجاح شركتك وتحقيق أهدافها الاستراتيجية
               </p>
             </div>
 
@@ -68,12 +69,26 @@ const Hero = () => {
                 size="lg"
                 className="text-lg px-8 py-6 text-white border-white/30 hover:bg-white/10 hover:text-white"
               >
-                تعرف على خدماتنا
+                تعرف على المزيد
               </Button>
             </div>
 
-            {/* Quote Highlight */}
-            <Card className="p-8 bg-gradient-primary/5 border border-primary/20 shadow-strong relative overflow-hidden">
+            {/* Company Info Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+                <h3 className="text-white font-bold text-lg mb-2">رؤيتنا</h3>
+                <p className="text-white/80 text-sm">أن نكون الشريك الأول لحلول الموارد البشرية المبتكرة في المملكة</p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+                <h3 className="text-white font-bold text-lg mb-2">رسالتنا</h3>
+                <p className="text-white/80 text-sm">تقديم حلول تنموية تساعد على تعزيز الأداء المؤسسي وتحسين بيئة العمل</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Quote Highlight */}
+          <div className="flex justify-center">
+            <Card className="p-8 bg-white/95 backdrop-blur-sm border border-white/20 shadow-strong relative overflow-hidden max-w-md">
               <div className="absolute top-4 right-4 w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
                 <Quote className="h-6 w-6 text-primary" />
               </div>
@@ -86,26 +101,6 @@ const Hero = () => {
                 </p>
               </div>
             </Card>
-          </div>
-
-          {/* Features Grid */}
-          <div className="space-y-6 bg-white/95 backdrop-blur-sm rounded-xl p-6 shadow-strong">
-            <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
-              <CheckCircle className="h-8 w-8 text-primary" />
-              لماذا تختار هدف؟
-            </h3>
-            <div className="grid grid-cols-1 gap-4">
-              {features.map((feature, index) => (
-                <Card key={index} className="p-5 shadow-soft hover:shadow-medium transition-all duration-300 hover:-translate-y-1 border-r-4 border-r-primary/20">
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary flex-shrink-0">
-                      {feature.icon}
-                    </div>
-                    <p className="text-sm leading-relaxed font-medium">{feature.text}</p>
-                  </div>
-                </Card>
-              ))}
-            </div>
           </div>
         </div>
       </div>
