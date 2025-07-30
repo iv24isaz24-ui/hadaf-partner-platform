@@ -39,9 +39,9 @@ const Hero = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
       
       <div className="container relative">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Text Content */}
-          <div className="space-y-8">
+        <div className="text-center space-y-12">
+          {/* Main Content */}
+          <div className="max-w-4xl mx-auto space-y-8">
             <div className="space-y-6">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white">
                 مرحباً بك في{" "}
@@ -51,13 +51,13 @@ const Hero = () => {
               <p className="text-xl md:text-2xl text-white/90">
                 شريكك الاستراتيجي لنجاحك التنظيمي
               </p>
-              <p className="text-lg text-white/80 leading-relaxed">
+              <p className="text-lg text-white/80 leading-relaxed max-w-3xl mx-auto">
                 شركة سعودية متخصصة في تقديم حلول شاملة واحترافية في مجالات الموارد البشرية، 
                 مدعومة بخبرة عميقة وتقنيات حديثة لضمان نجاح شركتك وتحقيق أهدافها الاستراتيجية
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 size="lg" 
                 className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8 py-6"
@@ -72,35 +72,21 @@ const Hero = () => {
                 تعرف على المزيد
               </Button>
             </div>
-
-            {/* Company Info Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
-                <h3 className="text-white font-bold text-lg mb-2">رؤيتنا</h3>
-                <p className="text-white/80 text-sm">أن نكون الشريك الأول لحلول الموارد البشرية المبتكرة في المملكة</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
-                <h3 className="text-white font-bold text-lg mb-2">رسالتنا</h3>
-                <p className="text-white/80 text-sm">تقديم حلول تنموية تساعد على تعزيز الأداء المؤسسي وتحسين بيئة العمل</p>
-              </div>
-            </div>
           </div>
 
-          {/* Quote Highlight */}
-          <div className="flex justify-center">
-            <Card className="p-8 bg-white/95 backdrop-blur-sm border border-white/20 shadow-strong relative overflow-hidden max-w-md">
-              <div className="absolute top-4 right-4 w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                <Quote className="h-6 w-6 text-primary" />
+          {/* Quote Section */}
+          <div className="max-w-2xl mx-auto">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 text-center">
+              <div className="w-20 h-20 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Quote className="h-10 w-10 text-white" />
               </div>
-              <div className="space-y-4">
-                <blockquote className="text-3xl font-bold text-primary">
-                  "نجاحك هو هدفنا."
-                </blockquote>
-                <p className="text-muted-foreground text-lg">
-                  شعار نؤمن به ونعمل من أجله في كل خدمة نقدمها
-                </p>
-              </div>
-            </Card>
+              <blockquote className="text-3xl md:text-4xl font-bold text-white mb-4">
+                "نجاحك هو هدفنا"
+              </blockquote>
+              <p className="text-white/80 text-lg">
+                شعار نؤمن به ونعمل من أجله في كل خدمة نقدمها
+              </p>
+            </div>
           </div>
         </div>
       </div>
