@@ -27,24 +27,31 @@ const Hero = () => {
   ];
 
   return (
-    <section id="home" className="relative pt-20 pb-16 overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-hero opacity-5"></div>
+    <section id="home" className="relative pt-20 pb-16 overflow-hidden min-h-screen">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: 'url(/lovable-uploads/5330ac50-e60d-4d21-81c7-83f8af239b7c.png)' }}
+      ></div>
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-black/60"></div>
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
       
       <div className="container relative">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
           <div className="space-y-8">
             <div className="space-y-4">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white">
                 مرحباً بك في{" "}
                 <span className="text-primary">شركة هدف</span>{" "}
                 للموارد البشرية
               </h1>
-              <p className="text-xl md:text-2xl text-muted-foreground">
+              <p className="text-xl md:text-2xl text-white/90">
                 شريكك الاستراتيجي لنجاحك التنظيمي
               </p>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-lg text-white/80">
                 حلول متكاملة، بفكر استشاري، وتقنية مرنة
               </p>
             </div>
@@ -59,7 +66,7 @@ const Hero = () => {
               <Button 
                 variant="outline" 
                 size="lg"
-                className="text-lg px-8 py-6"
+                className="text-lg px-8 py-6 text-white border-white/30 hover:bg-white/10 hover:text-white"
               >
                 تعرف على خدماتنا
               </Button>
@@ -82,7 +89,7 @@ const Hero = () => {
           </div>
 
           {/* Features Grid */}
-          <div className="space-y-6">
+          <div className="space-y-6 bg-white/95 backdrop-blur-sm rounded-xl p-6 shadow-strong">
             <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
               <CheckCircle className="h-8 w-8 text-primary" />
               لماذا تختار هدف؟
