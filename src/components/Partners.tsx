@@ -2,18 +2,18 @@ import { Card } from "@/components/ui/card";
 
 const Partners = () => {
   const partners = [
-    { name: "مجموعة السلطان", logo: "Sultan Group" },
-    { name: "كيمس", logo: "KIMS" },
-    { name: "مشتان", logo: "Mishtan" },
-    { name: "بهارات", logo: "Baharat" },
-    { name: "أرض الأصالة", logo: "Ard Al Asalah" },
-    { name: "أحباب", logo: "Ahbab" },
-    { name: "شركة مليص التجارية", logo: "Malayes Trading" },
-    { name: "صوص وبطاطس", logo: "Sauce & Potato" },
-    { name: "مجموعة السلطان", logo: "Sultan Group" },
-    { name: "كيمس", logo: "KIMS" },
-    { name: "مشتان", logo: "Mishtan" },
-    { name: "بهارات", logo: "Baharat" }
+    { name: "مجموعة السلطان" },
+    { name: "كيمس" },
+    { name: "مشتان" },
+    { name: "بهارات" },
+    { name: "أرض الأصالة" },
+    { name: "أحباب" },
+    { name: "شركة مليص التجارية" },
+    { name: "صوص وبطاطس" },
+    { name: "مجموعة السلطان" },
+    { name: "كيمس" },
+    { name: "مشتان" },
+    { name: "بهارات" }
   ];
 
   return (
