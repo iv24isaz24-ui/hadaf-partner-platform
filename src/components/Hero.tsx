@@ -68,16 +68,16 @@ const Hero = () => {
           </div>
 
           {/* Quote Section */}
-          <div className="max-w-2xl mx-auto">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 text-center">
-              <div className="w-20 h-20 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Quote className="h-10 w-10 text-white" />
+          <div className="max-w-xl mx-auto">
+            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center">
+              <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Quote className="h-6 w-6 text-white" />
               </div>
-              <blockquote className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h3 className="text-2xl font-bold text-white mb-2">
                 "نجاحك هو هدفنا"
-              </blockquote>
-              <p className="text-white/80 text-lg">
-                شعار نؤمن به ونعمل من أجله في كل خدمة نقدمها
+              </h3>
+              <p className="text-white/70 text-sm">
+                شعار نؤمن به ونعمل من أجله
               </p>
             </div>
           </div>

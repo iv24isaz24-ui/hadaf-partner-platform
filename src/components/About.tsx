@@ -75,16 +75,6 @@ const About = () => {
             </div>
           </div>
 
-          {/* CEO Quote */}
-          <Card className="p-8 bg-gradient-card shadow-medium">
-            <div className="space-y-4">
-              <h3 className="text-2xl font-bold">💬 كلمة مجلس الإدارة</h3>
-              <blockquote className="text-lg text-muted-foreground italic leading-relaxed">
-                "نفخر في هدف بدورنا الريادي في تطوير بيئة العمل بالمملكة. نؤمن بأن الاستثمار في الإنسان 
-                هو استثمار في المستقبل، ونعمل على تمكين الشركات من النمو من خلال حلولنا المتقدمة والمخصصة."
-              </blockquote>
-            </div>
-          </Card>
         </div>
       </div>
     </section>
