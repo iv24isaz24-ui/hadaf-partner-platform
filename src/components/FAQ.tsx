@@ -141,40 +141,26 @@ const FAQ = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-6">
+          <div className="space-y-4">
             {faqSections.map((section) => (
-              <Card key={section.id} className="shadow-medium hover:shadow-strong transition-all duration-300">
-                {/* Section Header */}
+              <Card key={section.id} className="overflow-hidden">
                 <button
                   onClick={() => toggleSection(section.id)}
-                  className="w-full p-6 text-right flex items-center justify-between hover:bg-gradient-primary/5 transition-colors rounded-t-lg"
+                  className="w-full p-6 text-right flex items-center justify-between hover:bg-muted/50 transition-colors"
                 >
-                  <div className="flex items-center gap-3">
-                    <div className="w-3 h-3 bg-primary rounded-full"></div>
-                    <h3 className="text-xl font-bold text-primary">{section.title}</h3>
-                  </div>
-                  <div className="bg-primary/10 p-2 rounded-full">
-                    {openSections[section.id] ? (
-                      <ChevronUp className="h-5 w-5 text-primary" />
-                    ) : (
-                      <ChevronDown className="h-5 w-5 text-primary" />
-                    )}
-                  </div>
+                  <h3 className="text-xl font-semibold">{section.title}</h3>
+                  {openSections[section.id] ? (
+                    <ChevronUp className="h-5 w-5" />
+                  ) : (
+                    <ChevronDown className="h-5 w-5" />
+                  )}
                 </button>
-
-                {/* Questions */}
                 {openSections[section.id] && (
-                  <div className="px-6 pb-6 space-y-6 bg-gradient-to-br from-muted/20 to-transparent">
+                  <div className="px-6 pb-6 space-y-4 border-t">
                     {section.questions.map((qa, index) => (
-                      <div key={index} className="group">
-                        <div className="bg-background rounded-lg p-4 shadow-sm border border-border/50 hover:border-primary/30 transition-all duration-200">
-                          <h4 className="font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
-                            {qa.question}
-                          </h4>
-                          <p className="text-muted-foreground leading-relaxed text-sm">
-                            {qa.answer}
-                          </p>
-                        </div>
+                      <div key={index} className="space-y-2">
+                        <h4 className="font-medium">{qa.question}</h4>
+                        <p className="text-muted-foreground text-sm">{qa.answer}</p>
                       </div>
                     ))}
                   </div>

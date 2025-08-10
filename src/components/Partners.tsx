@@ -26,17 +26,33 @@ const Partners = () => {
           </p>
         </div>
 
-        {/* Partners Slider */}
-        <div className="relative">
-          <div className="flex animate-scroll">
+        {/* Partners Continuous Animation */}
+        <div className="relative overflow-hidden">
+          <div className="flex animate-[scroll_30s_linear_infinite] hover:[animation-play-state:paused]">
+            {/* First set */}
             {partners.map((partner, index) => (
               <div
-                key={index}
-                className="flex-shrink-0 w-64 mx-4"
+                key={`first-${index}`}
+                className="flex-shrink-0 w-48 mx-3"
               >
-                <Card className="p-6 h-24 flex items-center justify-center bg-white/50 backdrop-blur-sm border border-white/20 shadow-soft hover:shadow-medium transition-all duration-300 hover:-translate-y-1 hover:bg-white/70">
+                <Card className="p-4 h-20 flex items-center justify-center bg-gradient-to-r from-white/80 to-white/60 backdrop-blur-sm border border-primary/10 shadow-soft hover:shadow-medium transition-all duration-300 hover:scale-105 hover:border-primary/30 group">
                   <div className="text-center">
-                    <h3 className="text-lg font-semibold text-foreground/80 whitespace-nowrap">
+                    <h3 className="text-base font-semibold text-foreground/80 whitespace-nowrap group-hover:text-primary transition-colors">
+                      {partner.name}
+                    </h3>
+                  </div>
+                </Card>
+              </div>
+            ))}
+            {/* Duplicate set for seamless loop */}
+            {partners.map((partner, index) => (
+              <div
+                key={`second-${index}`}
+                className="flex-shrink-0 w-48 mx-3"
+              >
+                <Card className="p-4 h-20 flex items-center justify-center bg-gradient-to-r from-white/80 to-white/60 backdrop-blur-sm border border-primary/10 shadow-soft hover:shadow-medium transition-all duration-300 hover:scale-105 hover:border-primary/30 group">
+                  <div className="text-center">
+                    <h3 className="text-base font-semibold text-foreground/80 whitespace-nowrap group-hover:text-primary transition-colors">
                       {partner.name}
                     </h3>
                   </div>
