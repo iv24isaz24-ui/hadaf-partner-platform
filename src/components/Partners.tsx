@@ -28,7 +28,7 @@ const Partners = () => {
 
         {/* Partners Continuous Animation */}
         <div className="relative overflow-hidden">
-          <div className="flex animate-[scroll_25s_linear_infinite]">
+          <div className="flex animate-[scroll_20s_linear_infinite] w-[300%]">
             {/* First set */}
             {partners.map((partner, index) => (
               <div
@@ -50,10 +50,31 @@ const Partners = () => {
                 </Card>
               </div>
             ))}
-            {/* Duplicate set for seamless loop */}
+            {/* Second set for seamless loop */}
             {partners.map((partner, index) => (
               <div
                 key={`second-${index}`}
+                className="flex-shrink-0 w-56 mx-4"
+              >
+                <Card className="relative h-24 overflow-hidden border border-primary/20 shadow-medium hover:shadow-strong transition-all duration-300 hover:scale-105 group">
+                  <div 
+                    className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                    style={{ backgroundImage: `url(${partner.image})` }}
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                  </div>
+                  <div className="relative z-10 h-full flex items-center justify-center p-4">
+                    <h3 className="text-white font-bold text-center text-sm leading-tight drop-shadow-lg group-hover:text-primary-foreground transition-colors">
+                      {partner.name}
+                    </h3>
+                  </div>
+                </Card>
+              </div>
+            ))}
+            {/* Third set for seamless loop */}
+            {partners.map((partner, index) => (
+              <div
+                key={`third-${index}`}
                 className="flex-shrink-0 w-56 mx-4"
               >
                 <Card className="relative h-24 overflow-hidden border border-primary/20 shadow-medium hover:shadow-strong transition-all duration-300 hover:scale-105 group">
