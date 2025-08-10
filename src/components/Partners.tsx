@@ -2,18 +2,18 @@ import { Card } from "@/components/ui/card";
 
 const Partners = () => {
   const partners = [
-    { name: "مجموعة السلطان" },
-    { name: "كيمس" },
-    { name: "مشتان" },
-    { name: "بهارات" },
-    { name: "أرض الأصالة" },
-    { name: "أحباب" },
-    { name: "شركة مليص التجارية" },
-    { name: "صوص وبطاطس" },
-    { name: "مجموعة السلطان" },
-    { name: "كيمس" },
-    { name: "مشتان" },
-    { name: "بهارات" }
+    { name: "مجموعة السلطان", image: "https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=200&h=100&fit=crop&crop=center" },
+    { name: "كيمس", image: "https://images.unsplash.com/photo-1556742393-d75f468bfcb0?w=200&h=100&fit=crop&crop=center" },
+    { name: "مشتان", image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=200&h=100&fit=crop&crop=center" },
+    { name: "بهارات", image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=200&h=100&fit=crop&crop=center" },
+    { name: "أرض الأصالة", image: "https://images.unsplash.com/photo-1554774853-719586f82d77?w=200&h=100&fit=crop&crop=center" },
+    { name: "أحباب", image: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=200&h=100&fit=crop&crop=center" },
+    { name: "شركة مليص التجارية", image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=100&fit=crop&crop=center" },
+    { name: "صوص وبطاطس", image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=200&h=100&fit=crop&crop=center" },
+    { name: "مجموعة السلطان", image: "https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=200&h=100&fit=crop&crop=center" },
+    { name: "كيمس", image: "https://images.unsplash.com/photo-1556742393-d75f468bfcb0?w=200&h=100&fit=crop&crop=center" },
+    { name: "مشتان", image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=200&h=100&fit=crop&crop=center" },
+    { name: "بهارات", image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=200&h=100&fit=crop&crop=center" }
   ];
 
   return (
@@ -28,16 +28,22 @@ const Partners = () => {
 
         {/* Partners Continuous Animation */}
         <div className="relative overflow-hidden">
-          <div className="flex animate-[scroll_30s_linear_infinite] hover:[animation-play-state:paused]">
+          <div className="flex animate-[scroll_25s_linear_infinite]">
             {/* First set */}
             {partners.map((partner, index) => (
               <div
                 key={`first-${index}`}
-                className="flex-shrink-0 w-48 mx-3"
+                className="flex-shrink-0 w-56 mx-4"
               >
-                <Card className="p-4 h-20 flex items-center justify-center bg-gradient-to-r from-white/80 to-white/60 backdrop-blur-sm border border-primary/10 shadow-soft hover:shadow-medium transition-all duration-300 hover:scale-105 hover:border-primary/30 group">
-                  <div className="text-center">
-                    <h3 className="text-base font-semibold text-foreground/80 whitespace-nowrap group-hover:text-primary transition-colors">
+                <Card className="relative h-24 overflow-hidden border border-primary/20 shadow-medium hover:shadow-strong transition-all duration-300 hover:scale-105 group">
+                  <div 
+                    className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                    style={{ backgroundImage: `url(${partner.image})` }}
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                  </div>
+                  <div className="relative z-10 h-full flex items-center justify-center p-4">
+                    <h3 className="text-white font-bold text-center text-sm leading-tight drop-shadow-lg group-hover:text-primary-foreground transition-colors">
                       {partner.name}
                     </h3>
                   </div>
@@ -48,11 +54,17 @@ const Partners = () => {
             {partners.map((partner, index) => (
               <div
                 key={`second-${index}`}
-                className="flex-shrink-0 w-48 mx-3"
+                className="flex-shrink-0 w-56 mx-4"
               >
-                <Card className="p-4 h-20 flex items-center justify-center bg-gradient-to-r from-white/80 to-white/60 backdrop-blur-sm border border-primary/10 shadow-soft hover:shadow-medium transition-all duration-300 hover:scale-105 hover:border-primary/30 group">
-                  <div className="text-center">
-                    <h3 className="text-base font-semibold text-foreground/80 whitespace-nowrap group-hover:text-primary transition-colors">
+                <Card className="relative h-24 overflow-hidden border border-primary/20 shadow-medium hover:shadow-strong transition-all duration-300 hover:scale-105 group">
+                  <div 
+                    className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                    style={{ backgroundImage: `url(${partner.image})` }}
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                  </div>
+                  <div className="relative z-10 h-full flex items-center justify-center p-4">
+                    <h3 className="text-white font-bold text-center text-sm leading-tight drop-shadow-lg group-hover:text-primary-foreground transition-colors">
                       {partner.name}
                     </h3>
                   </div>
