@@ -171,8 +171,21 @@ const FAQ = () => {
 
           {/* CTA */}
           <div className="text-center mt-12">
-            <div className="space-y-4">
-              <p className="text-muted-foreground">لم تجد إجابة لسؤالك؟</p>
+            <div className="space-y-6">
+              <p className="text-muted-foreground text-lg">لم تجد إجابة لسؤالك؟</p>
+              <div className="relative group">
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-purple-600 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+                <Button 
+                  size="lg" 
+                  className="relative bg-gradient-to-r from-primary to-purple-600 hover:from-primary/90 hover:to-purple-700 text-white border-0 px-12 py-4 text-lg font-semibold shadow-2xl transform hover:scale-105 transition-all duration-300 ease-out"
+                  onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                >
+                  <span className="flex items-center gap-3">
+                    تواصل معنا
+                    <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                  </span>
+                </Button>
+              </div>
             </div>
           </div>
         </div>
