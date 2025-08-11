@@ -27,7 +27,7 @@ const Header = () => {
   };
 
   const navItems = [
-    { name: "الرئيسية", href: "#home" },
+    { name: "الرئيسية", href: "/" },
     { 
       name: "خدماتنا", 
       href: "#services",
@@ -37,7 +37,6 @@ const Header = () => {
         { name: "منصة بُعد HR", href: "/boud-platform" }
       ]
     },
-    { name: "الباقات", href: "#packages" },
     { name: "من نحن", href: "#about" },
     { name: "المدونة", href: "#blog" },
     { name: "تواصل معنا", href: "#contact" }

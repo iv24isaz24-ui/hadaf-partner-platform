@@ -44,7 +44,7 @@ const Hero = () => {
           {/* Main Content */}
           <div className="max-w-4xl mx-auto space-y-8">
             <div className="space-y-6">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-white">
                 مرحباً بك في{" "}
                 <span className="text-primary">شركة هدف</span>{" "}
                 للموارد البشرية
