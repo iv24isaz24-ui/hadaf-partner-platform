@@ -119,7 +119,11 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-cairo;
+  }
+  
+  html {
+    font-family: 'Cairo', system-ui, sans-serif;
   }
 }
 
