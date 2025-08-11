@@ -173,12 +173,6 @@ const FAQ = () => {
           <div className="text-center mt-12">
             <div className="space-y-4">
               <p className="text-muted-foreground">لم تجد إجابة لسؤالك؟</p>
-              <Button 
-                size="lg" 
-                className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-6"
-              >
-                احصل على استشارة مجانية
-              </Button>
             </div>
           </div>
         </div>
