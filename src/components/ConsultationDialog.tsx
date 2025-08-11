@@ -25,12 +25,26 @@ import { useToast } from "@/hooks/use-toast";
 import { Loader2 } from "lucide-react";
 
 const formSchema = z.object({
-  name: z.string().min(2, "الاسم مطلوب ويجب أن يكون أكثر من حرفين"),
-  company: z.string().min(2, "اسم الشركة مطلوب"),
-  email: z.string().email("البريد الإلكتروني غير صحيح"),
-  phone: z.string().min(10, "رقم الهاتف مطلوب"),
-  serviceType: z.string().min(2, "نوع الخدمة مطلوب"),
-  message: z.string().min(10, "الرسالة مطلوبة ويجب أن تكون أكثر من 10 أحرف"),
+  name: z.string()
+    .min(2, "الاسم مطلوب ويجب أن يكون أكثر من حرفين")
+    .max(50, "الاسم لا يجب أن يتجاوز 50 حرف")
+    .regex(/^[\u0600-\u06FF\s]+$/, "الاسم يجب أن يحتوي على أحرف عربية فقط"),
+  company: z.string()
+    .min(2, "اسم الشركة مطلوب")
+    .max(100, "اسم الشركة لا يجب أن يتجاوز 100 حرف"),
+  email: z.string()
+    .email("البريد الإلكتروني غير صحيح")
+    .min(1, "البريد الإلكتروني مطلوب"),
+  phone: z.string()
+    .min(10, "رقم الهاتف يجب أن يكون 10 أرقام على الأقل")
+    .max(15, "رقم الهاتف لا يجب أن يتجاوز 15 رقم")
+    .regex(/^[\+]?[0-9\s\-\(\)]*$/, "رقم الهاتف يجب أن يحتوي على أرقام فقط"),
+  serviceType: z.string()
+    .min(2, "نوع الخدمة مطلوب")
+    .max(100, "نوع الخدمة لا يجب أن يتجاوز 100 حرف"),
+  message: z.string()
+    .min(10, "الرسالة مطلوبة ويجب أن تكون أكثر من 10 أحرف")
+    .max(500, "الرسالة لا يجب أن تتجاوز 500 حرف"),
 });
 
 type FormData = z.infer<typeof formSchema>;
