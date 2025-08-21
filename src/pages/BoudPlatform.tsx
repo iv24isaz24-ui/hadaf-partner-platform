@@ -77,7 +77,12 @@ const BoudPlatform = () => {
               <Button 
                 size="lg" 
                 className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-medium shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => {
+                  const phoneNumber = "966123456789"; // ضع رقم الهاتف الصحيح هنا
+                  const message = "أريد طلب عرض توضيحي لنظام بُعد";
+                  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                  window.open(whatsappUrl, '_blank');
+                }}
               >
                 <span className="flex items-center gap-3">
                   اطلب عرض توضيحي للنظام
