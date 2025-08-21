@@ -1,143 +1,95 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { GraduationCap, Users, BookOpen, Award, Clock, Target } from "lucide-react";
+import { Building2, Clock, Sparkles } from "lucide-react";
 
 const TrainingPlatform = () => {
-  const features = [
-    {
-      icon: <BookOpen className="h-8 w-8" />,
-      title: "مناهج تدريبية متخصصة",
-      description: "محتوى تدريبي عالي الجودة مصمم خصيصاً لتطوير المهارات المهنية"
-    },
-    {
-      icon: <Users className="h-8 w-8" />,
-      title: "تدريب تفاعلي",
-      description: "جلسات تدريبية تفاعلية مع المدربين المعتمدين"
-    },
-    {
-      icon: <Clock className="h-8 w-8" />,
-      title: "مرونة في المواعيد",
-      description: "إمكانية الوصول للتدريب في أي وقت ومن أي مكان"
-    },
-    {
-      icon: <Award className="h-8 w-8" />,
-      title: "شهادات معتمدة",
-      description: "احصل على شهادات معتمدة عند إتمام البرامج التدريبية"
-    }
-  ];
-
-  const programs = [
-    {
-      title: "برنامج تطوير القيادة",
-      duration: "8 أسابيع",
-      level: "متقدم",
-      description: "برنامج شامل لتطوير مهارات القيادة والإدارة الفعالة"
-    },
-    {
-      title: "برنامج إدارة الموارد البشرية",
-      duration: "12 أسبوع",
-      level: "متوسط إلى متقدم",
-      description: "تعلم أسس وممارسات إدارة الموارد البشرية الحديثة"
-    },
-    {
-      title: "برنامج المهارات الناعمة",
-      duration: "6 أسابيع",
-      level: "مبتدئ إلى متوسط",
-      description: "تطوير مهارات التواصل والعمل الجماعي والعرض"
-    },
-    {
-      title: "برنامج التحول الرقمي",
-      duration: "10 أسابيع",
-      level: "متقدم",
-      description: "فهم وتطبيق استراتيجيات التحول الرقمي في المؤسسات"
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-background font-cairo" dir="rtl">
       <Header />
       
-      {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-b from-primary/5 to-background">
-        <div className="container">
-          <div className="text-center space-y-6 max-w-4xl mx-auto">
-            <div className="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto">
-              <GraduationCap className="h-10 w-10 text-primary" />
+      {/* Coming Soon Section */}
+      <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+        {/* Background Logo */}
+        <div 
+          className="absolute inset-0 bg-center bg-no-repeat bg-contain opacity-8 dark:opacity-15"
+          style={{
+            backgroundImage: `url('/lovable-uploads/116bc241-72f0-4082-bb6c-281e161914eb.png')`,
+            backgroundSize: '80%',
+          }}
+        />
+        
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-background/85 dark:bg-background/90" />
+        
+        {/* Content */}
+        <div className="relative z-10 container text-center space-y-12 py-20">
+          <div className="space-y-8">
+            {/* Logo */}
+            <div className="flex justify-center animate-fade-in">
+              <img 
+                src="/lovable-uploads/116bc241-72f0-4082-bb6c-281e161914eb.png" 
+                alt="Real Estate Management Logo" 
+                className="h-48 md:h-64 lg:h-80 w-auto object-contain hover-scale"
+              />
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold">
-              منصة التدريب الإلكترونية
-            </h1>
-            <p className="text-xl text-muted-foreground">
-              طور مهاراتك ومهارات فريقك من خلال برامج تدريبية متخصصة ومعتمدة
-            </p>
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-              ابدأ التدريب الآن
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Features */}
-      <section className="py-16">
-        <div className="container">
-          <div className="text-center space-y-4 mb-12">
-            <h2 className="text-3xl font-bold">مميزات منصة التدريب</h2>
-            <p className="text-lg text-muted-foreground">
-              تجربة تدريبية متكاملة مصممة لتحقيق أفضل النتائج
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {features.map((feature, index) => (
-              <Card key={index} className="p-6 text-center shadow-medium hover:shadow-strong transition-all duration-300">
-                <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <div className="text-primary">
-                    {feature.icon}
-                  </div>
+            
+            {/* Title */}
+            <div className="space-y-4">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+                نظام إدارة الأملاك
+              </h1>
+              <div className="flex items-center justify-center gap-3 text-lg md:text-xl text-muted-foreground">
+                <Sparkles className="h-6 w-6 text-primary animate-pulse" />
+                <span>الحل الشامل لإدارة العقارات والأملاك</span>
+                <Sparkles className="h-6 w-6 text-primary animate-pulse" />
+              </div>
+            </div>
+            
+            {/* Coming Soon Message */}
+            <div className="space-y-6 max-w-2xl mx-auto">
+              <div className="flex items-center justify-center gap-3 text-2xl md:text-3xl font-bold text-foreground">
+                <Clock className="h-8 w-8 text-primary animate-spin" />
+                <span>سيتم إطلاق النظام قريباً</span>
+              </div>
+              
+              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+                نحن نعمل بجد لتطوير نظام متقدم لإدارة الأملاك والعقارات سيوفر حلولاً شاملة ومبتكرة لإدارة استثماراتك العقارية
+              </p>
+            </div>
+            
+            {/* Features Preview */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mt-12">
+              {[
+                "إدارة شاملة للعقارات",
+                "تتبع المدفوعات والإيجارات", 
+                "تقارير مالية متقدمة"
+              ].map((feature, index) => (
+                <div key={index} className="bg-card/50 backdrop-blur-sm rounded-lg p-6 border border-border/50">
+                  <div className="w-3 h-3 bg-primary rounded-full mx-auto mb-3 animate-pulse" />
+                  <p className="text-sm font-medium text-center">{feature}</p>
                 </div>
-                <h3 className="text-lg font-bold mb-2">{feature.title}</h3>
-                <p className="text-muted-foreground text-sm">{feature.description}</p>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Programs */}
-      <section className="py-16 bg-muted/30">
-        <div className="container">
-          <div className="text-center space-y-4 mb-12">
-            <h2 className="text-3xl font-bold">البرامج التدريبية</h2>
-            <p className="text-lg text-muted-foreground">
-              اختر البرنامج التدريبي المناسب لاحتياجاتك
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            {programs.map((program, index) => (
-              <Card key={index} className="p-6 shadow-medium hover:shadow-strong transition-all duration-300">
-                <div className="space-y-4">
-                  <div className="flex items-start justify-between">
-                    <div>
-                      <h3 className="text-xl font-bold mb-2">{program.title}</h3>
-                      <p className="text-muted-foreground text-sm">{program.description}</p>
-                    </div>
-                    <Target className="h-6 w-6 text-primary flex-shrink-0" />
-                  </div>
-                  
-                  <div className="flex gap-4 text-sm text-muted-foreground">
-                    <span>المدة: {program.duration}</span>
-                    <span>المستوى: {program.level}</span>
-                  </div>
-                  
-                  <Button variant="outline" className="w-full">
-                    التسجيل في البرنامج
-                  </Button>
-                </div>
-              </Card>
-            ))}
+              ))}
+            </div>
+            
+            {/* CTA Button */}
+            <div className="pt-8">
+              <Button 
+                size="lg" 
+                className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-medium shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                onClick={() => {
+                  const phoneNumber = "966123456789"; // ضع رقم الهاتف الصحيح هنا
+                  const message = "أريد طلب عرض توضيحي لنظام إدارة الأملاك";
+                  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                  window.open(whatsappUrl, '_blank');
+                }}
+              >
+                <span className="flex items-center gap-3">
+                  اطلب عرض توضيحي للنظام
+                  <div className="w-2 h-2 bg-current rounded-full animate-pulse" />
+                </span>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
