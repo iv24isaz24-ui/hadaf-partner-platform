@@ -12,25 +12,25 @@ const BoudPlatform = () => {
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
         {/* Background Logo */}
         <div 
-          className="absolute inset-0 bg-center bg-no-repeat bg-contain opacity-5 dark:opacity-10"
+          className="absolute inset-0 bg-center bg-no-repeat bg-contain opacity-8 dark:opacity-15"
           style={{
             backgroundImage: `url('/lovable-uploads/7b282a97-cfcd-4580-aa29-67580420b60e.png')`,
-            backgroundSize: '60%',
+            backgroundSize: '80%',
           }}
         />
         
         {/* Overlay */}
-        <div className="absolute inset-0 bg-background/80 dark:bg-background/90" />
+        <div className="absolute inset-0 bg-background/85 dark:bg-background/90" />
         
         {/* Content */}
         <div className="relative z-10 container text-center space-y-12 py-20">
           <div className="space-y-8">
             {/* Logo */}
-            <div className="flex justify-center">
+            <div className="flex justify-center animate-fade-in">
               <img 
                 src="/lovable-uploads/7b282a97-cfcd-4580-aa29-67580420b60e.png" 
                 alt="BOUD HR Logo" 
-                className="h-32 md:h-40 lg:h-48 w-auto object-contain"
+                className="h-48 md:h-64 lg:h-80 w-auto object-contain hover-scale"
               />
             </div>
             
@@ -80,7 +80,7 @@ const BoudPlatform = () => {
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 <span className="flex items-center gap-3">
-                  اطلب إشعار عند الإطلاق
+                  اطلب عرض توضيحي للنظام
                   <div className="w-2 h-2 bg-current rounded-full animate-pulse" />
                 </span>
               </Button>
