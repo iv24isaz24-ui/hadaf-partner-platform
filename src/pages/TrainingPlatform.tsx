@@ -30,13 +30,13 @@ const TrainingPlatform = () => {
               <img 
                 src="/lovable-uploads/116bc241-72f0-4082-bb6c-281e161914eb.png" 
                 alt="Real Estate Management Logo" 
-                className="h-48 md:h-64 lg:h-80 w-auto object-contain hover-scale"
+                className="h-32 md:h-40 lg:h-48 w-auto object-contain hover-scale"
               />
             </div>
             
             {/* Title */}
             <div className="space-y-4">
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[hsl(207,100%,20%)] dark:text-[hsl(207,100%,80%)]">
                 نظام إدارة الأملاك
               </h1>
               <div className="flex items-center justify-center gap-3 text-lg md:text-xl text-muted-foreground">
