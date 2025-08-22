@@ -32,7 +32,7 @@ const Header = () => {
       name: "خدماتنا", 
       href: "#services",
       subItems: [
-        { name: "منصة التدريب", href: "/training-platform" },
+        { name: "نظام إدارة الأملاك", href: "/training-platform" },
         { name: "منصة الخدمات الإلكترونية", href: "/e-services-platform" },
         { name: "منصة بُعد HR", href: "/boud-platform" }
       ]
@@ -97,13 +97,6 @@ const Header = () => {
           >
             {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
           </Button>
-          
-          <Button
-            variant="default"
-            className="hidden md:inline-flex bg-primary hover:bg-primary/90 text-primary-foreground"
-          >
-            استشارة مجانية
-          </Button>
 
           {/* Mobile menu button */}
           <Button
@@ -131,12 +124,6 @@ const Header = () => {
                 {item.name}
               </a>
             ))}
-            <Button
-              variant="default"
-              className="w-full mt-4 bg-primary hover:bg-primary/90 text-primary-foreground"
-            >
-              استشارة مجانية
-            </Button>
           </nav>
         </div>
       )}
