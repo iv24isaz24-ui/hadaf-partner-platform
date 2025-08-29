@@ -17,7 +17,16 @@ const Hero = () => {
   ];
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center">
+    <section id="home" className="relative min-h-screen flex items-center bg-gradient-to-br from-background via-background to-primary/5">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
+        style={{ backgroundImage: 'url(/lovable-uploads/5330ac50-e60d-4d21-81c7-83f8af239b7c.png)' }}
+      />
+      
+      {/* Subtle Animated Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/3 to-transparent animate-pulse" />
+      
       <div className="container relative z-10 py-20">
         <div className="max-w-4xl mx-auto text-center space-y-12">
           
