@@ -17,29 +17,7 @@ const Hero = () => {
   ];
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Animated Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-secondary/10" />
-      
-      {/* Floating Geometric Shapes */}
-      <div className="absolute inset-0">
-        <div className="absolute top-20 left-10 w-32 h-32 bg-primary/10 rounded-full blur-xl animate-pulse" />
-        <div className="absolute top-40 right-20 w-24 h-24 bg-secondary/15 rounded-full blur-lg animate-pulse delay-1000" />
-        <div className="absolute bottom-32 left-32 w-40 h-40 bg-accent/8 rounded-full blur-2xl animate-pulse delay-2000" />
-        <div className="absolute bottom-20 right-16 w-28 h-28 bg-primary/12 rounded-full blur-xl animate-pulse delay-500" />
-      </div>
-      
-      {/* Subtle Pattern Overlay */}
-      <div className="absolute inset-0 opacity-30">
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/3 to-transparent animate-[slide-in-right_8s_ease-in-out_infinite_alternate]" />
-      </div>
-      
-      {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-5 mix-blend-soft-light"
-        style={{ backgroundImage: 'url(/lovable-uploads/5330ac50-e60d-4d21-81c7-83f8af239b7c.png)' }}
-      />
-      
+    <section id="home" className="relative min-h-screen flex items-center">
       <div className="container relative z-10 py-20">
         <div className="max-w-4xl mx-auto text-center space-y-12">
           
