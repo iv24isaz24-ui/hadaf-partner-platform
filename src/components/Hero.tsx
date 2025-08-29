@@ -27,6 +27,9 @@ const Hero = () => {
       {/* Subtle Animated Overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/3 to-transparent animate-pulse" />
       
+      {/* Bottom Gradient Fade */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent z-5" />
+      
       <div className="container relative z-10 py-20">
         <div className="max-w-4xl mx-auto text-center space-y-12">
           
